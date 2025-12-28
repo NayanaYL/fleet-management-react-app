@@ -21,7 +21,7 @@ const AdminDashboard=()=>{
         if(!name||name.trim()==="")return;
         setFleets((prev)=>
         prev.map((f)=>(f.id===id ?{...f,driver:name}:f)));
-    },[]):
+    },[]);
     const toggleStatus =useCallback((id)=>{
         setFleets((prev)=>
         prev.map((f)=>
